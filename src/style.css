@@ -1,0 +1,9 @@
+@import "tailwindcss";
+
+/* Fuente de dragón ball */
+
+@font-face {
+    font-family: 'Sayan Sans';
+    src: url('./fonts/saiyan-sans/Saiyan-Sans.ttf') format('truetype');
+}
+  
