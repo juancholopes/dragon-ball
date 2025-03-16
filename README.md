@@ -1,12 +1,31 @@
-# React + Vite
+# Dragon Ball - React API 
 
-This template provides a minimal setup to get React working in Vite with HMR and some ESLint rules.
+## Instalación
 
-Currently, two official plugins are available:
+```bash
+npm install
+```
 
-- [@vitejs/plugin-react](https://github.com/vitejs/vite-plugin-react/blob/main/packages/plugin-react/README.md) uses [Babel](https://babeljs.io/) for Fast Refresh
-- [@vitejs/plugin-react-swc](https://github.com/vitejs/vite-plugin-react-swc) uses [SWC](https://swc.rs/) for Fast Refresh
+## Ejecución
 
-## Expanding the ESLint configuration
+```bash
+npm start
+```
 
-If you are developing a production application, we recommend using TypeScript and enable type-aware lint rules. Check out the [TS template](https://github.com/vitejs/vite/tree/main/packages/create-vite/template-react-ts) to integrate TypeScript and [`typescript-eslint`](https://typescript-eslint.io) in your project.
+## Despliegue
+
+```bash
+npm run build
+```
+
+## Despliegue en el servidor
+
+```bash
+npm run deploy
+```
+
+## Despliegue en el servidor con un subdominio
+
+```bash
+npm run deploy-subdomain
+```
