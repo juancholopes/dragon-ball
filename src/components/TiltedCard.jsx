@@ -35,7 +35,7 @@ const TiltedCard = () => {
     maxWidth: 300,
     minWidth: 250,
     boxSizing: "border-box",
-    background: "#fff",
+    background: "#373737",
     borderRadius: 12,
     padding: 12,
     display: "flex",

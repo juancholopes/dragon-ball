@@ -1,5 +1,5 @@
 import Stack from "@mui/material/Stack";
-
+import Paginator from "./components/Paginator.jsx";
 import TiltedCard from "./components/TiltedCard.jsx";
 
 const App = () => {
@@ -9,7 +9,8 @@ const App = () => {
         <h1 style={styleTitle}>Dragon Ball Z</h1>
       </Stack>
       <Stack style={styleText}>
-        <TiltedCard />
+        {/* <TiltedCard />- */}
+        <Paginator />
       </Stack>
     </Stack>
   );
@@ -46,4 +47,3 @@ const styleText = {
 };
 
 export default App;
-

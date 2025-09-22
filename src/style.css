@@ -3,7 +3,15 @@
 /* Fuente de dragón ball */
 
 @font-face {
-    font-family: 'Sayan Sans';
-    src: url('./fonts/saiyan-sans/Saiyan-Sans.ttf') format('truetype');
+  font-family: "Sayan Sans";
+  src: url("./fonts/saiyan-sans/Saiyan-Sans.ttf") format("truetype");
 }
-  
+
+@div-paginator {
+  display: flex;
+  bacgraundcolor: red;
+  color: red;
+  height: 1px;
+  weight: 1px;
+}
+
