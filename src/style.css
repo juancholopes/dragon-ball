@@ -6,12 +6,3 @@
   font-family: "Sayan Sans";
   src: url("./fonts/saiyan-sans/Saiyan-Sans.ttf") format("truetype");
 }
-
-@div-paginator {
-  display: flex;
-  bacgraundcolor: red;
-  color: red;
-  height: 1px;
-  weight: 1px;
-}
-
