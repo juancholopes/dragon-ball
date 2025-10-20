@@ -1,5 +1,4 @@
-// filepath: [postcss.config.js](http://_vscodecontentref_/0)
-module.exports = {
+export default {
 	plugins: {
 		tailwindcss: {},
 		autoprefixer: {},

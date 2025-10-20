@@ -1,8 +1,8 @@
-const BASE_URL = "https://dragonball-api.com/api";
+const BASE_URL = "https://dragonballapp.vercel.app";
 
 const fetchCharacters = async () => {
-	const response = await fetch(`${BASE_URL}/characters/?`);
-	return response.json();
+  const response = await fetch(`${BASE_URL}/dragonball`);
+  return response.json();
 };
 
 export default fetchCharacters;
