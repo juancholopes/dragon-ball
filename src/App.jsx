@@ -1,15 +1,25 @@
 import Stack from "@mui/material/Stack";
-
+import { useState } from "react";
+import SagaDock from "./components/Paginator.jsx";
 import TiltedCard from "./components/TiltedCard.jsx";
 
 const App = () => {
+  const [currentSaga, setCurrentSaga] = useState("z");
+  const [currentType, setCurrentType] = useState("dragonball");
+
   return (
     <Stack className="App">
       <Stack style={containerStyle}>
-        <h1 style={styleTitle}>Dragon Ball Z</h1>
+        <h1 style={styleTitle}>Dragon Ball</h1>
       </Stack>
+      <SagaDock 
+        onSagaChange={setCurrentSaga} 
+        currentSaga={currentSaga}
+        onTypeChange={setCurrentType}
+        currentType={currentType}
+      />
       <Stack style={styleText}>
-        <TiltedCard />
+        <TiltedCard saga={currentSaga} type={currentType} />
       </Stack>
     </Stack>
   );
@@ -46,4 +56,3 @@ const styleText = {
 };
 
 export default App;
-
