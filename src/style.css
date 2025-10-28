@@ -1,6 +1,8 @@
+/* biome-ignore lint/suspicious/noUnknownAtRules: <explanation> */
 @tailwind base;
 @tailwind components;
 @tailwind utilities;
+
 
 @layer base {
 	:root {

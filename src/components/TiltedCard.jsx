@@ -1,16 +1,28 @@
 import fetchCharacters from "../api.js";
+import SagaDock from "./Paginator.jsx";
 import { useEffect, useState } from "react";
 import { motion as Motion } from "motion/react";
 
-const TiltedCard = () => {
+const SkeletonCard = () => (
+  <div style={cardStyle} className="animate-pulse">
+    <div className="w-40 h-60 bg-gray-600 rounded mb-4"></div>
+    <div style={textContainerStyle}>
+      <div className="h-6 bg-gray-600 rounded w-3/4 mb-2 mx-auto"></div>
+      <div className="h-4 bg-gray-600 rounded w-1/2 mx-auto"></div>
+    </div>
+  </div>
+);
+
+const TiltedCard = ({ saga, type }) => {
   const [characters, setCharacters] = useState([]);
   const [loading, setLoading] = useState(true);
   const [error, setError] = useState(null);
 
   useEffect(() => {
     (async () => {
+      setLoading(true);
       try {
-        const data = await fetchCharacters();
+        const data = await fetchCharacters(saga, type);
         setCharacters(Array.isArray(data) ? data : (data.items ?? []));
       } catch (e) {
         setError(e.message);
@@ -18,9 +30,18 @@ const TiltedCard = () => {
         setLoading(false);
       }
     })();
-  }, []);
+  }, [saga, type]);
 
-  if (loading) return <div>Cargando ...</div>;
+  if (loading)
+    return (
+      <div style={gridStyle}>
+        {Array(10)
+          .fill()
+          .map((_, i) => (
+            <SkeletonCard key={i} />
+          ))}
+      </div>
+    );
   if (error) return <div>Error: {error}</div>;
 
   return (
@@ -80,7 +101,7 @@ const titleStyle = {
 
 const subtitleStyle = {
   fontFamily: "Sayan Sans",
-  color: "#999",
+  color: "#999999",
   fontSize: "14px",
   margin: "4px 0 0",
 };
