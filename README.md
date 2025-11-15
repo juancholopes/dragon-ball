@@ -2,6 +2,11 @@
 
 A React application that fetches and displays Dragon Ball characters using an external API. This project demonstrates API integration, component composition, and modern React patterns.
 
+[![Netlify Status](https://api.netlify.com/api/v1/badges/f95094b6-66d7-4bb2-ab5e-35a754a0c1f7/deploy-status)](https://app.netlify.com/projects/reactdragonball/deploys)
+
+
+[Dragon Ball - Deploy](https://reactdragonball.netlify.app/)
+
 ## Features
 
 - Browse Dragon Ball characters from different sagas
